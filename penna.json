@@ -1,0 +1,119 @@
+{
+  "info": {
+    "_testmasterhub_id": "244b3665-feb4-4cd1-be8f-191bb54fb7fa",
+    "_exporter_id": "5c6073ed-0dae-4480-8ce8-161db534a68a",
+    "name": "penna",
+    "description": "This is a new collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "id": "facc368c-2944-4aa1-8f7a-f86a74c9c623",
+      "name": "which",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        },
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept-Encoding",
+            "value": "gzip, deflate, br"
+          },
+          {
+            "key": "User-Agent",
+            "value": "TestMasterHub/1.0 (Windows NT 10.0; Win64; x64)"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Connection",
+            "value": "keep-alive"
+          }
+        ],
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "url": {
+          "raw": "",
+          "protocol": "http",
+          "host": [],
+          "path": [],
+          "variable": [
+            {
+              "key": "",
+              "value": "",
+              "description": ""
+            }
+          ],
+          "query": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [],
+      "data": {
+        "isran": false
+      }
+    }
+  ],
+  "auth": {
+    "type": "noauth",
+    "basic": []
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [],
+  "id": "244b3665-feb4-4cd1-be8f-191bb54fb7fa"
+}
