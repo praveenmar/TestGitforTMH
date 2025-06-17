@@ -1,0 +1,127 @@
+{
+  "info": {
+    "_testmasterhub_id": "c598c432-51c8-47c0-89c8-e78ec163f4ae",
+    "_exporter_id": "c10da66e-52d9-4154-a324-8c8dafcf91b0",
+    "name": "collection 2",
+    "description": "This is a new collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "id": "09e8f8de-5bc6-466c-87d4-97df0827919f",
+      "name": "request 2",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "TMH.test(\"GET /users?page=2 returns users on page 2\", () => {\n  TMH.expect(response.status()).toBe(200);\n  TMH.expect(response.json().page).toBe(2);\n  TMH.expect(response.json().data).toBeType(\"array\");\n  TMH.expect(response.json().data[0]).toHaveProperty(\"id\");\n  TMH.expect(response.json().data[0].email).toBeType(\"string\");\n});"
+            ],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        },
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept-Encoding",
+            "value": "gzip, deflate, br"
+          },
+          {
+            "key": "User-Agent",
+            "value": "TestMasterHub/1.0 (Windows NT 10.0; Win64; x64)"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Connection",
+            "value": "keep-alive"
+          }
+        ],
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://reqres.in/api/users?page=2",
+          "protocol": "https",
+          "host": [
+            "reqres",
+            "in"
+          ],
+          "path": [
+            "api",
+            "users?page=2"
+          ],
+          "variable": [],
+          "query": [
+            {
+              "key": "page",
+              "value": "2",
+              "description": ""
+            }
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [],
+      "data": {
+        "isran": true
+      }
+    }
+  ],
+  "auth": {
+    "type": "noauth",
+    "basic": []
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [],
+  "id": "c598c432-51c8-47c0-89c8-e78ec163f4ae"
+}
