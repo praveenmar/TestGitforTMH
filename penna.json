@@ -14,7 +14,9 @@
         {
           "listen": "test",
           "script": {
-            "exec": [],
+            "exec": [
+              "TMH.test(\"GET https://google.com returns Bad Request\", () => {\n  TMH.expect(response.status()).toBe(400);\n  TMH.expect(response.json()).toHaveProperty(\"error\");\n  TMH.expect(response.json().error).toBe(\"Bad Request\");\n  TMH.expect(response.json()).toHaveProperty(\"requestUrl\");\n});"
+            ],
             "type": "text/javascript",
             "packages": {}
           }
@@ -59,17 +61,14 @@
           ]
         },
         "url": {
-          "raw": "",
-          "protocol": "http",
-          "host": [],
-          "path": [],
-          "variable": [
-            {
-              "key": "",
-              "value": "",
-              "description": ""
-            }
+          "raw": "https://google.com",
+          "protocol": "https",
+          "host": [
+            "google",
+            "com"
           ],
+          "path": [],
+          "variable": [],
           "query": []
         },
         "body": {
@@ -84,8 +83,13 @@
       },
       "response": [],
       "data": {
-        "isran": false
-      }
+        "isran": true
+      },
+      "auth": {
+        "type": "noauth",
+        "basic": []
+      },
+      "variable": []
     }
   ],
   "auth": {
