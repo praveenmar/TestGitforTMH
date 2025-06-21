@@ -15,7 +15,7 @@
           "listen": "test",
           "script": {
             "exec": [
-              "var JsonData = TMH.response.json();\n\n\nTMH.test(\"Status code should be 200\", () => {\n  TMH.expect(TMH.response.status()).toBe(200);\n});\n\n\nTMH.test(\"Response should contain data array\", () => {\n  TMH.expect(JsonData).toHaveProperty(\"data\");\n});\n\n\nTMH.test(\"Page number should be 2\", () => {\n  TMH.expect(JsonData.page).toBe(2);\n});\n\n\nTMH.test(\"First name should be a string\", () => {\n  TMH.expect(JsonData.data[0].first_name).toBeType(\"string\");\n});\n\n\nTMH.test(\"Support URL should contain 'contentcaddy.io'\", () => {\n  TMH.expect(JsonData.support.url).toContain(\"contentcaddy.io\");\n});"
+              "var JsonData = TMH.response.json();\n\n\nTMH.test(\"Status code should be 200\", () => {\n  TMH.expect(TMH.response.status()).toBe(200);\n});\n\n\nTMH.test(\"Response should contain data property\", () => {\n  TMH.expect(JsonData).toHaveProperty(\"data\");\n});\n\n\nTMH.test(\"Page number should be 3\", () => {\n  TMH.expect(JsonData.page).toBe(3);\n});\n\n\nTMH.test(\"Data should be an array\", () => {\n  TMH.expect(JsonData.data).toBeType(\"array\");\n});\n\n\nTMH.test(\"Support URL should contain 'contentcaddy.io'\", () => {\n  TMH.expect(JsonData.support.url).toContain(\"contentcaddy.io\");\n});"
             ],
             "type": "text/javascript",
             "packages": {}
@@ -61,7 +61,7 @@
           ]
         },
         "url": {
-          "raw": "https://reqres.in/api/users?page=2",
+          "raw": "https://reqres.in/api/users?page=3",
           "protocol": "https",
           "host": [
             "reqres",
@@ -69,13 +69,13 @@
           ],
           "path": [
             "api",
-            "users?page=2"
+            "users?page=3"
           ],
           "variable": [],
           "query": [
             {
               "key": "page",
-              "value": "2",
+              "value": "3",
               "description": ""
             }
           ]
@@ -93,7 +93,12 @@
       "response": [],
       "data": {
         "isran": true
-      }
+      },
+      "auth": {
+        "type": "noauth",
+        "basic": []
+      },
+      "variable": []
     }
   ],
   "auth": {
