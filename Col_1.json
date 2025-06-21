@@ -61,7 +61,7 @@
           ]
         },
         "url": {
-          "raw": "https://reqres.in/api/users?page=2",
+          "raw": "https://reqres.in/api/users?page=new",
           "protocol": "https",
           "host": [
             "reqres",
@@ -69,13 +69,13 @@
           ],
           "path": [
             "api",
-            "users?page=2"
+            "users?page=new"
           ],
           "variable": [],
           "query": [
             {
               "key": "page",
-              "value": "2",
+              "value": "new",
               "description": ""
             }
           ]
