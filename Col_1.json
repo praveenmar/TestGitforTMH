@@ -1,0 +1,127 @@
+{
+  "info": {
+    "_testmasterhub_id": "82075bc2-2499-43ec-baa4-e82483ca1d33",
+    "_exporter_id": "9468446a-befd-4ae2-86c3-131902896660",
+    "name": "Col 1",
+    "description": "This is a new collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "id": "9364cac2-a8b4-44b7-8ec5-f0828215c874",
+      "name": "re 1",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "var JsonData = TMH.response.json();\n\n\nTMH.test(\"Status code should be 200\", () => {\n  TMH.expect(TMH.response.status()).toBe(200);\n});\n\n\nTMH.test(\"Response should contain data array\", () => {\n  TMH.expect(JsonData).toHaveProperty(\"data\");\n});\n\n\nTMH.test(\"Page number should be 2\", () => {\n  TMH.expect(JsonData.page).toBe(2);\n});\n\n\nTMH.test(\"First name should be a string\", () => {\n  TMH.expect(JsonData.data[0].first_name).toBeType(\"string\");\n});\n\n\nTMH.test(\"Support URL should contain 'contentcaddy.io'\", () => {\n  TMH.expect(JsonData.support.url).toContain(\"contentcaddy.io\");\n});"
+            ],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        },
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept-Encoding",
+            "value": "gzip, deflate, br"
+          },
+          {
+            "key": "User-Agent",
+            "value": "TestMasterHub/1.0 (Windows NT 10.0; Win64; x64)"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Connection",
+            "value": "keep-alive"
+          }
+        ],
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://reqres.in/api/users?page=2",
+          "protocol": "https",
+          "host": [
+            "reqres",
+            "in"
+          ],
+          "path": [
+            "api",
+            "users?page=2"
+          ],
+          "variable": [],
+          "query": [
+            {
+              "key": "page",
+              "value": "2",
+              "description": ""
+            }
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [],
+      "data": {
+        "isran": true
+      }
+    }
+  ],
+  "auth": {
+    "type": "noauth",
+    "basic": []
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [],
+  "id": "82075bc2-2499-43ec-baa4-e82483ca1d33"
+}
