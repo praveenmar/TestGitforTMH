@@ -1,21 +1,21 @@
 {
   "info": {
-    "_testmasterhub_id": "82075bc2-2499-43ec-baa4-e82483ca1d33",
-    "_exporter_id": "9468446a-befd-4ae2-86c3-131902896660",
-    "name": "Col 1",
+    "_testmasterhub_id": "bea03a4e-2d70-4146-b8f3-76b5fc85d535",
+    "_exporter_id": "5d910583-14c9-43f6-8a47-f68b8c59ce7d",
+    "name": "benzzz",
     "description": "This is a new collection",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
     {
-      "id": "9364cac2-a8b4-44b7-8ec5-f0828215c874",
-      "name": "re 1",
+      "id": "476616ec-6423-42e0-9385-2b57fdc1bb2d",
+      "name": "rope",
       "event": [
         {
           "listen": "test",
           "script": {
             "exec": [
-              "var JsonData = TMH.response.json();\n\n\nTMH.test(\"Status code should be 200\", () => {\n  TMH.expect(TMH.response.status()).toBe(200);\n});\n\n\nTMH.test(\"Response should contain data property\", () => {\n  TMH.expect(JsonData).toHaveProperty(\"data\");\n});\n\n\nTMH.test(\"Page number should be 3\", () => {\n  TMH.expect(JsonData.page).toBe(3);\n});\n\n\nTMH.test(\"Data should be an array\", () => {\n  TMH.expect(JsonData.data).toBeType(\"array\");\n});\n\n\nTMH.test(\"Support URL should contain 'contentcaddy.io'\", () => {\n  TMH.expect(JsonData.support.url).toContain(\"contentcaddy.io\");\n});"
+              "var JsonData = TMH.response.json();\n\n\nTMH.test(\"Status code should be 200\", () => {\n  TMH.expect(TMH.response.status()).toBe(200);\n});\n\n\nTMH.test(\"Response should contain data array\", () => {\n  TMH.expect(JsonData).toHaveProperty(\"data\");\n});\n\n\nTMH.test(\"Page should be 2\", () => {\n  TMH.expect(JsonData.page).toBe(2);\n});\n\n\nTMH.test(\"Total pages should be a number\", () => {\n  TMH.expect(JsonData.total_pages).toBeType(\"number\");\n});\n\n\nTMH.test(\"First user email should contain @\", () => {\n  TMH.expect(JsonData.data[0].email).toContain(\"@\");\n});"
             ],
             "type": "text/javascript",
             "packages": {}
@@ -61,7 +61,7 @@
           ]
         },
         "url": {
-          "raw": "https://reqres.in/api/users?page=hola",
+          "raw": "https://reqres.in/api/users?page=2",
           "protocol": "https",
           "host": [
             "reqres",
@@ -69,13 +69,13 @@
           ],
           "path": [
             "api",
-            "users?page=hola"
+            "users?page=2"
           ],
           "variable": [],
           "query": [
             {
               "key": "page",
-              "value": "hola",
+              "value": "2",
               "description": ""
             }
           ]
@@ -92,13 +92,8 @@
       },
       "response": [],
       "data": {
-        "isran": false
-      },
-      "auth": {
-        "type": "noauth",
-        "basic": []
-      },
-      "variable": []
+        "isran": true
+      }
     }
   ],
   "auth": {
@@ -128,5 +123,5 @@
     }
   ],
   "variable": [],
-  "id": "82075bc2-2499-43ec-baa4-e82483ca1d33"
+  "id": "bea03a4e-2d70-4146-b8f3-76b5fc85d535"
 }
