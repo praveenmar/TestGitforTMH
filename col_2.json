@@ -1,0 +1,127 @@
+{
+  "info": {
+    "_testmasterhub_id": "47f8ce59-1829-492b-b900-47c02f5ccd5e",
+    "_exporter_id": "be7f6f7e-eb7b-460d-b468-50a602794fc1",
+    "name": "col 2",
+    "description": "This is a new collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "id": "9170ffff-d4de-4ddb-9d65-4e3ffa3f3c89",
+      "name": "re 2",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "var JsonData = TMH.response.json();\n\n\nTMH.test(\"Status code should be 401\", () => {\n  TMH.expect(TMH.response.status()).toBe(401);\n});\n\n\nTMH.test(\"Response should contain error property\", () => {\n  TMH.expect(JsonData).toHaveProperty(\"error\");\n});\n\n\nTMH.test(\"Error should be a string\", () => {\n  TMH.expect(JsonData.error).toBeType(\"string\");\n});\n\n\nTMH.test(\"Response should contain response property\", () => {\n  TMH.expect(JsonData).toHaveProperty(\"response\");\n});\n\n\nTMH.test(\"Response.error should be defined\", () => {\n  TMH.expect(JsonData.response.error).toBeDefined();\n});"
+            ],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        },
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept-Encoding",
+            "value": "gzip, deflate, br"
+          },
+          {
+            "key": "User-Agent",
+            "value": "TestMasterHub/1.0 (Windows NT 10.0; Win64; x64)"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Connection",
+            "value": "keep-alive"
+          }
+        ],
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://reqres.in/api/users?page=3",
+          "protocol": "https",
+          "host": [
+            "reqres",
+            "in"
+          ],
+          "path": [
+            "api",
+            "users?page=3"
+          ],
+          "variable": [],
+          "query": [
+            {
+              "key": "page",
+              "value": "3",
+              "description": ""
+            }
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [],
+      "data": {
+        "isran": true
+      }
+    }
+  ],
+  "auth": {
+    "type": "noauth",
+    "basic": []
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [],
+  "id": "47f8ce59-1829-492b-b900-47c02f5ccd5e"
+}
