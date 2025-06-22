@@ -61,7 +61,7 @@
           ]
         },
         "url": {
-          "raw": "https://reqres.in/api/users?page=this is an update",
+          "raw": "https://reqres.in/api/users?page=98",
           "protocol": "https",
           "host": [
             "reqres",
