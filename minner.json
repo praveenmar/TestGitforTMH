@@ -1,22 +1,20 @@
 {
   "info": {
-    "_testmasterhub_id": "82075bc2-2499-43ec-baa4-e82483ca1d33",
-    "_exporter_id": "9468446a-befd-4ae2-86c3-131902896660",
-    "name": "Col 1",
+    "_testmasterhub_id": "5c9df434-8941-4a7a-a467-959fe94c5a18",
+    "_exporter_id": "e6d7cf2a-c252-4ed4-a446-56564789d41b",
+    "name": "minner",
     "description": "This is a new collection",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
     {
-      "id": "9364cac2-a8b4-44b7-8ec5-f0828215c874",
-      "name": "re 1",
+      "id": "940de532-2e3b-4f84-95c2-29a66999892c",
+      "name": "port",
       "event": [
         {
           "listen": "test",
           "script": {
-            "exec": [
-              "var JsonData = TMH.response.json();\n\n\nTMH.test(\"Status code should be 200\", () => {\n  TMH.expect(TMH.response.status()).toBe(200);\n});\n\n\nTMH.test(\"Response should contain data property\", () => {\n  TMH.expect(JsonData).toHaveProperty(\"data\");\n});\n\n\nTMH.test(\"Page number should be 3\", () => {\n  TMH.expect(JsonData.page).toBe(3);\n});\n\n\nTMH.test(\"Data should be an array\", () => {\n  TMH.expect(JsonData.data).toBeType(\"array\");\n});\n\n\nTMH.test(\"Support URL should contain 'contentcaddy.io'\", () => {\n  TMH.expect(JsonData.support.url).toContain(\"contentcaddy.io\");\n});"
-            ],
+            "exec": [],
             "type": "text/javascript",
             "packages": {}
           }
@@ -61,7 +59,7 @@
           ]
         },
         "url": {
-          "raw": "https://reqres.in/api/users?page=zzzzzzzzz",
+          "raw": "https://reqres.in/api/users?page=98s",
           "protocol": "https",
           "host": [
             "reqres",
@@ -69,13 +67,13 @@
           ],
           "path": [
             "api",
-            "users?page=zzzzzzzzz"
+            "users?page=98s"
           ],
           "variable": [],
           "query": [
             {
               "key": "page",
-              "value": "zzzzzzzzz",
+              "value": "98s",
               "description": ""
             }
           ]
@@ -93,12 +91,7 @@
       "response": [],
       "data": {
         "isran": false
-      },
-      "auth": {
-        "type": "noauth",
-        "basic": []
-      },
-      "variable": []
+      }
     }
   ],
   "auth": {
@@ -128,5 +121,5 @@
     }
   ],
   "variable": [],
-  "id": "82075bc2-2499-43ec-baa4-e82483ca1d33"
+  "id": "5c9df434-8941-4a7a-a467-959fe94c5a18"
 }
