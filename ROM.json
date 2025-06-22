@@ -61,7 +61,7 @@
           ]
         },
         "url": {
-          "raw": "https://reqres.in/api/users?page=1",
+          "raw": "https://reqres.in/api/users?page=98",
           "protocol": "https",
           "host": [
             "reqres",
@@ -69,13 +69,13 @@
           ],
           "path": [
             "api",
-            "users?page=1"
+            "users?page=98"
           ],
           "variable": [],
           "query": [
             {
               "key": "page",
-              "value": "1",
+              "value": "98",
               "description": ""
             }
           ]
@@ -92,8 +92,13 @@
       },
       "response": [],
       "data": {
-        "isran": true
-      }
+        "isran": false
+      },
+      "auth": {
+        "type": "noauth",
+        "basic": []
+      },
+      "variable": []
     }
   ],
   "auth": {

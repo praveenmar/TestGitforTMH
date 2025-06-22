@@ -61,7 +61,7 @@
           ]
         },
         "url": {
-          "raw": "https://reqres.in/api/users?page=zzzzzzzzzzzzzzzzzzzzzzzzzz",
+          "raw": "https://reqres.in/api/users?page=zzzzzzzzz",
           "protocol": "https",
           "host": [
             "reqres",
@@ -69,13 +69,13 @@
           ],
           "path": [
             "api",
-            "users?page=zzzzzzzzzzzzzzzzzzzzzzzzzz"
+            "users?page=zzzzzzzzz"
           ],
           "variable": [],
           "query": [
             {
               "key": "page",
-              "value": "zzzzzzzzzzzzzzzzzzzzzzzzzz",
+              "value": "zzzzzzzzz",
               "description": ""
             }
           ]
