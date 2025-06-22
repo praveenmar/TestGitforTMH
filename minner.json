@@ -1,0 +1,125 @@
+{
+  "info": {
+    "_testmasterhub_id": "5c9df434-8941-4a7a-a467-959fe94c5a18",
+    "_exporter_id": "e6d7cf2a-c252-4ed4-a446-56564789d41b",
+    "name": "minner",
+    "description": "This is a new collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "id": "940de532-2e3b-4f84-95c2-29a66999892c",
+      "name": "port",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        },
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept-Encoding",
+            "value": "gzip, deflate, br"
+          },
+          {
+            "key": "User-Agent",
+            "value": "TestMasterHub/1.0 (Windows NT 10.0; Win64; x64)"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Connection",
+            "value": "keep-alive"
+          }
+        ],
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://reqres.in/api/users?page=98s",
+          "protocol": "https",
+          "host": [
+            "reqres",
+            "in"
+          ],
+          "path": [
+            "api",
+            "users?page=98s"
+          ],
+          "variable": [],
+          "query": [
+            {
+              "key": "page",
+              "value": "98s",
+              "description": ""
+            }
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [],
+      "data": {
+        "isran": false
+      }
+    }
+  ],
+  "auth": {
+    "type": "noauth",
+    "basic": []
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [],
+  "id": "5c9df434-8941-4a7a-a467-959fe94c5a18"
+}

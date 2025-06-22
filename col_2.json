@@ -61,7 +61,7 @@
           ]
         },
         "url": {
-          "raw": "https://reqres.in/api/users?page=with",
+          "raw": "https://reqres.in/api/users?page=withpo",
           "protocol": "https",
           "host": [
             "reqres",
@@ -69,13 +69,13 @@
           ],
           "path": [
             "api",
-            "users?page=with"
+            "users?page=withpo"
           ],
           "variable": [],
           "query": [
             {
               "key": "page",
-              "value": "with",
+              "value": "withpo",
               "description": ""
             }
           ]
