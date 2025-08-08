@@ -9,7 +9,7 @@
   "item": [
     {
       "id": "6cc22383-3163-40c0-9630-35a1fba0e0c4",
-      "name": "get post",
+      "name": "get posts",
       "event": [
         {
           "listen": "test",
