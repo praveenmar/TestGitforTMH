@@ -1,0 +1,384 @@
+{
+  "info": {
+    "_testmasterhub_id": "a2707b27-c16e-4718-b62e-50ccfed23641",
+    "_exporter_id": "9c1bf741-68e6-4772-816d-46eecfebae4c",
+    "name": "jsonplaceholdertest",
+    "description": "This is a new collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "id": "6cc22383-3163-40c0-9630-35a1fba0e0c4",
+      "name": "get post",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "var JsonData = TMH.response.json();\n\n\nTMH.test(\"Status code should be 200\", () => {\n  TMH.expect(TMH.response.status()).toBe(200);\n});\n\n\nTMH.test(\"Response should be an array\", () => {\n  TMH.expect(JsonData).toBeType(\"array\");\n});\n\n\nTMH.test(\"First element should have userId property\", () => {\n  TMH.expect(JsonData[0]).toHaveProperty(\"userId\");\n});\n\n\nTMH.test(\"First element userId should be a number\", () => {\n  TMH.expect(JsonData[0].userId).toBeType(\"number\");\n});\n\n\nTMH.test(\"Response array should not be empty\", () => {\n  TMH.expect(JsonData.length).toBeGreaterThan(0);\n});"
+            ],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        },
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept-Encoding",
+            "value": "gzip, deflate, br"
+          },
+          {
+            "key": "User-Agent",
+            "value": "TestMasterHub/1.0 (Windows NT 10.0; Win64; x64)"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Connection",
+            "value": "keep-alive"
+          }
+        ],
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/posts",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "posts"
+          ],
+          "variable": [],
+          "query": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [],
+      "data": {
+        "isran": false
+      }
+    },
+    {
+      "id": "cc7a038c-645f-4e78-a613-c9bcc57f95b4",
+      "name": "post a post",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "var JsonData = TMH.response.json();\n\n\nTMH.test(\"Status code should be 200\", () => {\n  TMH.expect(TMH.response.status()).toBe(200);\n});\n\n\nTMH.test(\"Response should be an array\", () => {\n  TMH.expect(JsonData).toBeType(\"array\");\n});\n\n\nTMH.test(\"First element should have userId property\", () => {\n  TMH.expect(JsonData[0]).toHaveProperty(\"userId\");\n});\n\n\nTMH.test(\"First element userId should be a number\", () => {\n  TMH.expect(JsonData[0].userId).toBeType(\"number\");\n});\n\n\nTMH.test(\"Response array should have a length greater than 0\", () => {\n  TMH.expect(JsonData.length).toBeGreaterThan(0);\n});"
+            ],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        },
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept-Encoding",
+            "value": "gzip, deflate, br"
+          },
+          {
+            "key": "User-Agent",
+            "value": "TestMasterHub/1.0 (Windows NT 10.0; Win64; x64)"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Connection",
+            "value": "keep-alive"
+          }
+        ],
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/posts",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "posts"
+          ],
+          "variable": [],
+          "query": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [],
+      "data": {
+        "isran": true
+      },
+      "auth": {
+        "type": "noauth",
+        "basic": []
+      },
+      "variable": []
+    },
+    {
+      "id": "746f13dc-644f-4dd6-a986-6045edd2884f",
+      "name": "Delete a post",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "var JsonData = TMH.response.json();\n\n\nTMH.test(\"Status code should be 200\", () => {\n  TMH.expect(TMH.response.status()).toBe(200);\n});\n\n\nTMH.test(\"Response should have userId property\", () => {\n  TMH.expect(JsonData).toHaveProperty(\"userId\");\n});\n\n\nTMH.test(\"userId should be a number\", () => {\n  TMH.expect(JsonData.userId).toBeType(\"number\");\n});\n\n\nTMH.test(\"title should be defined\", () => {\n  TMH.expect(JsonData.title).toBeDefined();\n});\n\n\nTMH.test(\"body should be defined\", () => {\n  TMH.expect(JsonData.body).toBeDefined();\n});"
+            ],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        },
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Accept-Encoding",
+            "value": "gzip, deflate, br"
+          },
+          {
+            "key": "User-Agent",
+            "value": "TestMasterHub/1.0 (Windows NT 10.0; Win64; x64)"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Connection",
+            "value": "keep-alive"
+          }
+        ],
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/posts/{{value}}",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "posts",
+            "{{value}}"
+          ],
+          "variable": [],
+          "query": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [],
+      "data": {
+        "isran": false
+      },
+      "auth": {
+        "type": "noauth",
+        "basic": []
+      },
+      "variable": []
+    },
+    {
+      "id": "6217cf2b-8182-4941-a2e2-91ad44520e43",
+      "name": "update a post",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "var JsonData = TMH.response.json();\n\n\nTMH.test(\"Status code should be 200\", () => {\n  TMH.expect(TMH.response.status()).toBe(200);\n});\n\n\nTMH.test(\"Response should have userId property\", () => {\n  TMH.expect(JsonData).toHaveProperty(\"userId\");\n});\n\n\nTMH.test(\"UserId should be a number\", () => {\n  TMH.expect(JsonData.userId).toBeType(\"number\");\n});\n\n\nTMH.test(\"Title should be a string\", () => {\n  TMH.expect(JsonData.title).toBeType(\"string\");\n});\n\n\nTMH.test(\"userId should be 1\", () => {\n  TMH.expect(JsonData.userId).toBe(1);\n});"
+            ],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        },
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Accept-Encoding",
+            "value": "gzip, deflate, br"
+          },
+          {
+            "key": "User-Agent",
+            "value": "TestMasterHub/1.0 (Windows NT 10.0; Win64; x64)"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Connection",
+            "value": "keep-alive"
+          }
+        ],
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/posts/{{value}}",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "posts",
+            "{{value}}"
+          ],
+          "variable": [],
+          "query": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [],
+      "data": {
+        "isran": false
+      },
+      "auth": {
+        "type": "noauth",
+        "basic": []
+      },
+      "variable": []
+    }
+  ],
+  "auth": {
+    "type": "noauth",
+    "basic": []
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [],
+  "id": "a2707b27-c16e-4718-b62e-50ccfed23641"
+}
