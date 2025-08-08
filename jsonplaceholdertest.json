@@ -148,7 +148,7 @@
           ]
         },
         "url": {
-          "raw": "https://jsonplaceholder.typicode.com/posts",
+          "raw": "https://jsonplaceholder.typicode.com/post",
           "protocol": "https",
           "host": [
             "jsonplaceholder",
@@ -156,7 +156,7 @@
             "com"
           ],
           "path": [
-            "posts"
+            "post"
           ],
           "variable": [],
           "query": []
@@ -173,7 +173,7 @@
       },
       "response": [],
       "data": {
-        "isran": true
+        "isran": false
       },
       "auth": {
         "type": "noauth",
